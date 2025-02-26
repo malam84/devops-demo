@@ -111,6 +111,7 @@
 				</configuration>
 		</plugin>
 		</plugins>
+		<finalName>login-example</finalName>
 	</build>
 
 </project>
