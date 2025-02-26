@@ -87,6 +87,20 @@
 	</dependencies>
 
 	<build>
+		<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+	      <configuration>
+				<source>${java.version}</source>
+				<target>${java.version}</target>
+					<!-- The output of Xlint is not shown by default, but we activate it for the QA bot
+					to be able to get more warnings -->
+					<useIncrementalCompilation>false</useIncrementalCompilation>
+				</configuration>
+      </plugin>
+    </plugins>
 		<finalName>ms-login-backend</finalName>
 	</build>
 
