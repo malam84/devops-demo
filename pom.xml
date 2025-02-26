@@ -94,9 +94,21 @@
                         <artifactId>maven-compiler-plugin</artifactId>
 			<version>3.14.0</version>
 			<configuration>
-				<source>21</source>
-				<target>21</target>
-			</configuration>
+				<source>${java.version}</source>
+				<target>${java.version}</target>
+					<!-- The output of Xlint is not shown by default, but we activate it for the QA bot
+					to be able to get more warnings -->
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<!-- The semantics of this option are reversed, see MCOMPILER-209. -->
+					<useIncrementalCompilation>false</useIncrementalCompilation>
+					<compilerArgs>
+						<!-- The output of Xlint is not shown by default, but we activate it for the QA bot
+						to be able to get more warnings -->
+						<arg>-Xlint:all</arg>
+						<!-- Prevents recompilation due to missing package-info.class, see MCOMPILER-205 -->
+						<arg>-Xpkginfo:always</arg>
+					</compilerArgs>
+				</configuration>
 		</plugin>
 		</plugins>
 	</build>
