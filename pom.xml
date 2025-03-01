@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jts</groupId>
-	<artifactId>login-example</artifactId>
+	<artifactId>backend-login-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>login-example</name>
+	<name>backend-login-demo</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
